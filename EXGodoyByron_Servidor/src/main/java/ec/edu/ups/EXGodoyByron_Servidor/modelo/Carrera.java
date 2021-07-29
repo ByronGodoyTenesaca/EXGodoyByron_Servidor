@@ -2,6 +2,7 @@ package ec.edu.ups.EXGodoyByron_Servidor.modelo;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Carrera {
@@ -10,6 +11,9 @@ public class Carrera {
 	private int codigo;
 	private String nombre;
 	private String directorCarrera;
+	
+	@OneToOne
+	private Universidad universidad;
 	
 	
 	public int getCodigo() {
@@ -29,6 +33,12 @@ public class Carrera {
 	}
 	public void setDirectorCarrera(String directorCarrera) {
 		this.directorCarrera = directorCarrera;
+	}
+	public Universidad getUniversidad() {
+		return universidad;
+	}
+	public void setUniversidad(Universidad universidad) {
+		this.universidad = universidad;
 	}
 	
 	

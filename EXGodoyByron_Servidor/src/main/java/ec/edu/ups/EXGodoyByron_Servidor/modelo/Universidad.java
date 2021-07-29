@@ -14,6 +14,7 @@ public class Universidad {
 	private String nombre;
 	private String direccion;
 	private String telefono;
+	
 	@OneToMany
 	private List<Carrera> carreras;
 	
@@ -42,6 +43,11 @@ public class Universidad {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	
+	public List<Carrera> getCarreras() {
+		return carreras;
+	}
+	public void setCarreras(List<Carrera> carreras) {
+		this.carreras = carreras;
+	}
 	
 }
